@@ -1,0 +1,14 @@
+https://www.npmjs.com/package/config
+Node-Config
+-- 
+npm install config
+md config
+vi default.json
+
+{
+  "DBConnection": {
+      "host": "mvkprod",
+      "port": 1521,
+      "dbName": "mvkbil"
+  }
+}
