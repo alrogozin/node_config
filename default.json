@@ -1,8 +1,0 @@
-{
-  "DBConnection": {
-      "host": "mvkprod",
-      "port": 1521,
-      "dbName": "mvkbil",
-      "user": "mvk"
-  }
-}

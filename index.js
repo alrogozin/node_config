@@ -5,6 +5,7 @@ const dbConnection = config.get('DBConnection');
 const dbConn = {
     iHost: '',
     iUser: '',
+    iPort: '',
 }
 
 let host = '';
@@ -20,5 +21,10 @@ if (config.has('DBConnection.user')) {
     throw new Error('error in config DBConnection.user');
  }
 
-console.log("bdname::" + dbConn.iHost + " dbUser:" + dbConn.iUser);
+if (config.has('DBConnection.port')) {
+   dbConn.iPort = config.get('DBConnection.port');
+} else {
+   throw new Error('error in config DBConnection.port');
+}
+console.log("bdname::" + dbConn.iHost + " dbUser:" + dbConn.iUser + " port:" + dbConn.iPort);
 
